@@ -5,3 +5,7 @@ document.onkeydown=e=>{if(e.key==='Escape')m.classList.remove('on')};
 f.onsubmit=async e=>{e.preventDefault();const d=Object.fromEntries(new FormData(f)),btn=f.querySelector('button.btn');btn.disabled=true;btn.textContent='Sending…';
 const{error}=await sb.from('website_leads').insert({name:d.name,email:d.email,phone:d.phone||null,industry:d.industry,message:d.msg||null});
 btn.disabled=false;btn.textContent='Send →';if(error){alert('Sorry, could not send: '+error.message);return}f.reset();fields.hidden=true;thanks.hidden=false};
+const ucT=document.querySelectorAll('.uctabs button'),ucC=document.querySelectorAll('.uc');
+const ucF=k=>{ucT.forEach(b=>b.classList.toggle('on',b.dataset.f==k));ucC.forEach(c=>c.hidden=k!='all'&&c.dataset.k!=k)};
+ucT.forEach(b=>b.onclick=()=>ucF(b.dataset.f));
+document.querySelectorAll('[data-uc]').forEach(a=>a.onclick=e=>{e.preventDefault();ucF('all');const c=document.getElementById('uc-'+a.dataset.uc);c.scrollIntoView({behavior:'smooth',block:'center'});c.classList.add('hl');setTimeout(()=>c.classList.remove('hl'),1800)});
