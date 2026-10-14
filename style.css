@@ -118,3 +118,4 @@ h1{font-weight:800;line-height:1.02}h2{font-weight:700;font-size:clamp(1.9rem,3.
 .tagS{border-radius:999px}
 @media(max-width:900px){.uctabs{width:auto}}
 .hero .card{background:linear-gradient(180deg,rgba(42,98,149,.88),rgba(15,46,77,.9))}
+.hero-vis .card{background:linear-gradient(180deg,#2a6295,#173f66)!important}
