@@ -99,3 +99,22 @@ footer{background:linear-gradient(160deg,#0F2E4D,#0a2239)}
 @media(max-width:900px){.hero-bg{background:transparent}}
 footer .btn{color:#0F2E4D}
 html{background:#0F2E4D}body{background-attachment:scroll;background-color:#0F2E4D}
+/* ===== iOS appearance ===== */
+:root{--sys:-apple-system,BlinkMacSystemFont,'SF Pro Display','Inter',system-ui,sans-serif;--glass:rgba(31,78,121,.42);--hair:rgba(245,239,227,.18)}
+body,button,input,select,textarea,.btn,.uctabs button{font-family:var(--sys);-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+h1,h2,h3,h4,.f h3,.uc h3,.uch h3,.stats strong,.card h4,.mbox h3,.uc .res b,.chart span{font-family:var(--sys);letter-spacing:-.025em}
+h1{font-weight:800;line-height:1.02}h2{font-weight:700;font-size:clamp(1.9rem,3.4vw,2.7rem)}h2:after{display:none}.f h3,.uc h3,.uch h3{font-weight:650;font-size:1.15rem}
+.brand b{font-family:'Cormorant Garamond',serif}
+.nav{background:rgba(12,36,62,.62);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--hair);box-shadow:none}
+.btn{border-radius:999px;font-weight:600;border:.5px solid rgba(201,161,90,.6);transition:transform .2s cubic-bezier(.2,.8,.2,1),box-shadow .2s,filter .2s}.btn:active{transform:scale(.97)}
+.card,.f,.row,.stats,.uc,.uc:nth-child(even),.mbox{backdrop-filter:blur(22px) saturate(160%);-webkit-backdrop-filter:blur(22px) saturate(160%);border:.5px solid var(--hair);border-radius:22px;box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 12px 32px -14px rgba(0,0,0,.45)}
+.card,.f,.row,.stats,.uc,.uc:nth-child(even),.mbox,.f:nth-child(n+3):nth-child(even){background:linear-gradient(180deg,rgba(58,109,156,.5),rgba(31,78,121,.36))}
+.f:nth-child(even):not(:nth-child(n+3)),.uc:nth-child(3n){background:rgba(245,239,227,.94)}
+.f,.uc{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}.f:hover,.uc:hover{transform:translateY(-4px);border-color:rgba(201,161,90,.6)}
+.uctabs{background:rgba(255,255,255,.08);border:.5px solid var(--hair);border-radius:12px;padding:3px;gap:2px;width:max-content;max-width:100%;margin-left:auto;margin-right:auto}
+.uctabs button{background:transparent;border:0;border-radius:9px;color:#dbe4ec;padding:7px 14px;font-weight:500;transition:background .25s,color .25s}.uctabs .on{background:#F5EFE3;color:#0F2E4D;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.mbox input,.mbox select,.mbox textarea{background:rgba(255,255,255,.08);border:.5px solid var(--hair);border-radius:12px}
+.modal{background:rgba(5,20,36,.45);backdrop-filter:blur(8px)}
+.tagS{border-radius:999px}
+@media(max-width:900px){.uctabs{width:auto}}
+.hero .card{background:linear-gradient(180deg,rgba(42,98,149,.88),rgba(15,46,77,.9))}
